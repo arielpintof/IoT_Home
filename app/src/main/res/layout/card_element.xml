@@ -34,15 +34,20 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_launcher_foreground" />
 
-        <ToggleButton
+
+        <com.github.angads25.toggle.widget.LabeledSwitch
             android:id="@+id/toggleButton"
             android:layout_width="69dp"
             android:layout_height="36dp"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="15dp"
-            android:text="ToggleButton"
+            android:layout_marginTop="16dp"
+            android:textSize="14sp"
+            app:colorBorder="@android:color/holo_green_dark"
+            app:colorOn="@android:color/holo_green_dark"
             app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:on="false" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

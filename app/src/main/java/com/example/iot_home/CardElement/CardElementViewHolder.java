@@ -8,10 +8,11 @@ import android.widget.ToggleButton;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.iot_home.R;
+import com.github.angads25.toggle.widget.LabeledSwitch;
 
 public class CardElementViewHolder extends RecyclerView.ViewHolder {
     TextView titulo;
-    ToggleButton button;
+    LabeledSwitch button;
     ImageView imagen;
 
     public CardElementViewHolder(@NonNull View itemView) {

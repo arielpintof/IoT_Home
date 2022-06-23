@@ -12,6 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.iot_home.R;
 import com.example.iot_home.model.Sala;
+import com.github.angads25.toggle.interfaces.OnToggledListener;
+import com.github.angads25.toggle.model.ToggleableView;
+import com.github.angads25.toggle.widget.LabeledSwitch;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -41,11 +44,15 @@ public class CardElementAdaptador extends RecyclerView.Adapter<CardElementViewHo
 
         holder.titulo.setText(listaDeSalas.get(position).getNombre());
         holder.imagen.setImageResource(listaDeSalas.get(position).getIcono());
-        holder.button.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if (isChecked) {
-                databaseReference.setValue(1);
-            } else {
-                databaseReference.setValue(0);
+        holder.button.setOnToggledListener(new OnToggledListener() {
+            @Override
+            public void onSwitched(ToggleableView toggleableView, boolean isOn) {
+
+                if (isOn) {
+                    databaseReference.setValue(1);
+                } else {
+                    databaseReference.setValue(0);
+                }
             }
         });
 

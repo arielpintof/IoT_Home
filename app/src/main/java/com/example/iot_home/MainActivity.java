@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
+
 
         List<Sala> salas = new ArrayList<>();
         salas.add(new Sala("Dormitorio", R.drawable.ic_launcher_foreground));
